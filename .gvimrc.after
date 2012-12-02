@@ -1,0 +1,12 @@
+" this file belongs to https://github.com/carlhuda/janus gem for making macvim
+" pretty and easy to use
+colorscheme clarity
+set transparency=40
+set number
+set cindent
+set smartindent
+set autoindent
+set expandtab ts=2 sw=2 ai
+set tabstop=2
+set shiftwidth=2
+set cinkeys=0{,0},:,0#,!,!^F
