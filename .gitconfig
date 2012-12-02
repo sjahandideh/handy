@@ -1,0 +1,16 @@
+[user]
+	name = Shamim Jahandideh
+	email = shamim.jahandideh@gmail.com
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	editor = mvim
+[merge]
+	tool = opendiff
+[push]
+	default = matching
+[pull]
+	default = matching
