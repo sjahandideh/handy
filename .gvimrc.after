@@ -10,5 +10,3 @@ set expandtab ts=2 sw=2 ai
 set tabstop=2
 set shiftwidth=2
 set cinkeys=0{,0},:,0#,!,!^F
-hi Visual  guifg=#CD0074 guibg=DarkBlue gui=none
-set tags=./tags;/
