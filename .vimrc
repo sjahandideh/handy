@@ -4,6 +4,7 @@ color codeschool
 set guifont=Monaco:h16
 set shiftwidth=2
 set tabstop=2
+set statusline=%F " full path of current file
 
 " scrolling
 set mouse=a
