@@ -4,6 +4,9 @@ color codeschool
 set guifont=Monaco:h16
 set shiftwidth=2
 set tabstop=2
+set shiftwidth=2
+set expandtab
+set backspace=indent,eol,start
 set statusline=%F " full path of current file
 
 " scrolling
