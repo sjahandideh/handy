@@ -1,0 +1,93 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'git_status.vim'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-cucumber'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'rking/ag.vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'dsawardekar/ember.vim'
+Plugin 'AndrewRadev/ember_tools.vim'
+Plugin 'joukevandermaas/vim-ember-hbs'
+Plugin 'moll/vim-node'
+Plugin 'posva/vim-vue'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'prettier/vim-prettier'
+"Plugin 'Neoformat'
+" Plugin 'sbdchd/neoformat'
+"Plugin 'jparise/vim-graphql'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+map <C-N> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeGlyphReadOnly = "RO"
+
+" ack uses ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+colorscheme elflord
+set guifont=Monaco:h13
+
+" vim-javascript
+" set foldmethod=syntax " vim-javascript plugin
+let g:javascript_plugin_jsdoc = 1
+
+" vim-syntastic
+let g:syntastic_javascript_checkers=['eslint']
+
+" Prettier on save
+"augroup formatting
+"  autocmd!
+"  autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Neoformat
+"augroup END
+
+" folding
+" zc — close the fold (where your cursor is positioned)
+" zM —close all folds on current buffer
+" zo — open the fold (where your cursor is positioned)
+" zR — open all folds on current buffer
+" zj — cursor is moved to next fold
+" zk — cursor is moved to previous fold
+set foldmethod=syntax "syntax highliting items specify folds
+set foldcolumn=1      "defines 1 coloumn at window left, to indicate folding
+let javascript_fold=1 "activate folding by JS syntax
+set foldlevelstart=99 "start file with all folds opened
+
+">> Tabs as spaces
+set tabstop=2     " tabs are at proper location
+set expandtab     " don't use actual tab character (ctrl-v)
+set shiftwidth=2  " indenting is 4 spaces
+set autoindent    " turns it on
+set smartindent   " does the right thing (mostly) in programs
+set cindent       " stricter rules for C programs
+
+">> Tabs as tabs
+" set autoindent
+" set noexpandtab
+" set tabstop=4
+" set shiftwidth=4
